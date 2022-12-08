@@ -1,0 +1,16 @@
+/* #jr{
+    background-color: darkgoldenrod;
+} */
+/* div >span{
+    background-color: blue;
+} */
+
+/* 选出中间的div里面的1 */
+/* div.demo1{
+    background-color:blue;
+} */
+
+/* 并列选择器 */
+strong,em,div,p{
+    background-color: blueviolet;
+}
