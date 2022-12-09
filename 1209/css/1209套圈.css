@@ -1,0 +1,36 @@
+.box1{height: 160px;
+      width: 160px;
+      background-color: fuchsia;
+      padding: 10px;
+     
+}
+
+.box2{height:140px;
+      width: 140px;
+      background-color: darkorange;
+      padding: 10px;
+    
+}
+
+.box3{
+    height: 120px;
+    width: 120px;
+    background-color: aquamarine;
+    padding: 10px;
+
+}
+
+.box4{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    padding: 10px;
+    
+}
+
+.box5{
+    height: 100px;
+    width: 100px;
+    background-color:red;
+
+}
