@@ -1,0 +1,71 @@
+/* body{
+    margin: 0;
+}
+div{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+} */
+
+/* 塌陷问题：
+.warpper{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(255, 0, 0);
+    margin-left: 100px;
+    margin-top: 100px;
+    overflow: hidden;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(0,0,0);
+    margin-left: 100px;
+    margin-top: 100px;
+} */
+
+/* 合并问题 */
+/* div.demo1{
+    background-color: red;
+    margin-bottom: 50px;
+}
+div.demo2{
+    background-color: green;
+    margin-top: 50px;
+}
+div.warpper{
+    overflow: hidden;
+} */
+
+/* 自定义标签 */
+/* i{
+    display: block;
+    border: 5px solid red;
+    font-style: normal;
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+} */
+
+/* body{
+    margin: 0px;
+}
+.box1{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: cornflowerblue;
+}
+.box2{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: coral;
+}
+.box3{
+    position:absolute;
+    left: 100px;
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+} */
