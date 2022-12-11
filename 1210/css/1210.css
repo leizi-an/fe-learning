@@ -7,13 +7,13 @@ div{
     background-color: red;
 } */
 
-/* 塌陷问题：
+/*塌陷问题：
 .warpper{
     height: 200px;
     width: 200px;
     background-color: rgb(255, 0, 0);
     margin-left: 100px;
-    margin-top: 100px;
+    margin-top: 200px;
     overflow: hidden;
 }
 .box{
@@ -21,7 +21,7 @@ div{
     width: 100px;
     background-color: rgb(0,0,0);
     margin-left: 100px;
-    margin-top: 100px;
+    margin-top: 50px;
 } */
 
 /* 合并问题 */
@@ -69,3 +69,4 @@ div.warpper{
     width: 100px;
     background-color: chartreuse;
 } */
+

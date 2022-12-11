@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.first{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border: 5px solid red;
+    left: 0;
+    top: 0;
+}
+.second
+{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border: 5px dashed blue;
+    right: 0;
+    top: 0;
+}
+.third{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border: 5px dotted green;
+    left: 0;
+    bottom: 0;
+}
+.fourth{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border: 5px double yellow;
+    right: 0;
+    bottom: 0;
+}
