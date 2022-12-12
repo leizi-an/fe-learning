@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0
+}
+.right,.left{
+    height: 100px;
+}
+.right{
+    /* position: absolute; */
+    /* right: 0; */
+    float: right;
+    width: 100px;
+    background-color: pink;
+}
+.left{
+    background-color: cornflowerblue;
+    margin-right: 100px;
+}

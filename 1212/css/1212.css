@@ -1,0 +1,134 @@
+/* .warpper{
+    这些都是野路子（一般会在父集添加 overflow: hidden;  position: absolute;{切记只有绝对定位 position: absolute可以} 或者用display转化为行内块）,最后一种方式就是让父集也浮动
+    width: 500px;
+    border: 5px solid red;
+    overflow: hidden;
+    position: absolute;
+    display: inline-block;
+    float: left;
+}
+.context{
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    color: aliceblue;
+} */
+
+/* （最好看的办法在父集上添加一个伪元素） */
+/* .warpper::after{
+    content: "";
+    display: block;
+    clear: both;
+} */
+/* p {
+    clear: both;
+} */
+
+/* .demo{
+    position: relative;
+    display: inline-block;
+    background-color: red;
+    color: aliceblue;
+}
+.demo::before{
+    position: absolute;
+    background-color: yellow;
+   content: "中国";
+   display: inline-block;
+   height: 40px;
+   width: 20px;
+   left: 80px;
+   top: 100px;
+}
+.demo::after{
+    position: absolute;
+    content: "是事实";
+    display: inline-block;
+    height: 80px;
+    width: 60px;
+    left: 200px;
+    top: 100px;
+    background-color: blue;
+} */
+/* p{
+    height: 500px;
+    width: 500px;
+    border: 2px solid red;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 500px;
+} */
+/* div{
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    background-image: url(https://pic.baike.soso.com/ugc/baikepic2/6352/cut-20160422211655-657399273.jpg/0);
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    text-indent: 200px;
+    white-space: nowrap;
+    overflow:hidden;
+} */
+
+
+/* cover 
+pic{
+    height: 100px;400;
+    width: 100px;400;
+}
+bgk{
+    height: 200px;
+    width: 400px;
+} */
+
+/* span{
+    display: inline-block;
+    height: 30px;
+    width: 10px;
+    background-color: red;
+    vertical-align: middle;
+}
+div{
+    height: 25px;
+    border: 1px solid black;
+    line-height: 25px;
+} */
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+/* div{
+    position: relative;
+    width: 300px;
+    background-color: aqua;
+    color: azure;
+    line-height: 14px;
+    font-size: 14px;
+    padding: 9px 0;
+}
+div::before{
+    content: "";
+    display: inline-block;
+    height: 12px;
+    width: 11px;
+    background-image: url(https://tse4-mm.cn.bing.net/th/id/OIP-C.0-MwPYMCrlTMM0zjs1aLfgAAAA?pid=ImgDet&rs=1);
+    background-color: red;
+    background-size: cover;
+    margin: 2px 5px;
+}
+div::after{
+    position: absolute;
+    content: "";
+    display: inline-block;
+    height: 11.5px;
+    width: 7px;
+    background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.d57d21ba9f7d5e34d44ef14012d31113?rik=1cv1k7zgGe%2fkCA&riu=http%3a%2f%2fwww.kuaipng.com%2fUploads%2fpic%2fw%2f2020%2f10-10%2f92712%2fwater_92712_698_698_.png&ehk=o1eTNS0RYTm2AKsYyaU6ybh6NT0E5q99ATC9BqzvZbc%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    position: absolute;
+    right: 5px;
+} */
