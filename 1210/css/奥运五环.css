@@ -1,0 +1,58 @@
+.huabu{
+    height: 196px;
+    width: 406px;
+    background-color: rgb(26, 24, 24);
+    position: absolute;
+    left: 50%;
+    margin-left: -98px;
+    top: 50%;
+    margin-top: -203px;
+}
+.quan1{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 15px solid rgb(22, 130, 219);
+    border-radius: 50%;
+    z-index: 5;;
+}
+.quan2{
+    position: absolute;
+    left: 50px;
+    top:50px;
+    height: 100px;
+    width: 100px;
+    border: 15px solid rgb(193, 233, 15);
+    border-radius: 50%;
+    z-index: 4;
+}
+.quan3{
+    position: absolute;
+    left: 55px;
+   bottom: 50px;
+    height: 100px;
+    width: 100px;
+    border: 15px solid rgb(15, 1, 1);
+    border-radius: 50%;
+    z-index: 3;
+}
+.quan4{
+    position: absolute;
+    left: 55px;
+    top:50px;
+    height: 100px;
+    width: 100px;
+    border: 15px solid rgb(8, 202, 76);
+    border-radius: 50%;
+    z-index: 2;
+}
+.quan5{
+    position: absolute;
+    left:55px;
+    bottom: 50px;
+    height: 100px;
+    width: 100px;
+    border: 15px solid rgb(243, 38, 38);
+    border-radius: 50%;
+    z-index: 1; 
+}

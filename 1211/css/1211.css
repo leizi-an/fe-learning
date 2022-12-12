@@ -1,0 +1,94 @@
+/* .demo{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: fixed;
+    left: 100px;
+    top: 100px;
+} */
+
+/* *{
+    margin: 0px;
+    padding: 0px;
+}
+.demo{
+
+    float: left;
+      height: 100px;
+      width: 100px;
+      background-color: yellow;
+
+}
+.box{
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+}
+.context{
+    float: left;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    font-size: 10px;
+    font-weight: bold;
+    color: aliceblue;
+} */
+
+
+/* .context{
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+.warpper{
+        display: inline-block;
+         border: 2px solid black;
+} */
+/* img{
+    float: left;
+} */
+
+/* .warpper{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    float: left;
+}
+.demo{
+    height: 200px;
+    background-color: cyan;
+    color: rgb(13, 13, 14);
+} */
+
+
+*{
+    list-style: none;     /*去除那个点*/
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color:#424242;
+}
+li{
+    text-align: center;
+    /* border: 2px solid black; */
+    height: 30px;
+    width: 80px;
+    line-height: 30px;      /* 让那个字体占满整行*/
+    /* background-color: yellowgreen; */
+    float: left;
+    margin-left: 3px;
+    
+}
+li>a{
+    color: #f40;
+    font-weight: bold;
+    display: inline-block;
+    /* background-color: rgb(236, 166, 16); */
+    width: 80px;
+    padding: 0 10px;
+}
+li>a:hover{
+    background-color: #ddd;
+}
