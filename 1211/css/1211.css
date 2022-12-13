@@ -63,7 +63,7 @@ img{
 } */
 
 
-*{
+ *{
     list-style: none;     /*去除那个点*/
     margin: 0;
     padding: 0;
@@ -91,4 +91,4 @@ li>a{
 }
 li>a:hover{
     background-color: #ddd;
-}
+} 

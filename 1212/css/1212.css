@@ -102,7 +102,7 @@ div{
     margin: 0;
     padding: 0;
 } */
-/* div{
+div{
     position: relative;
     width: 300px;
     background-color: aqua;
@@ -131,4 +131,5 @@ div::after{
     background-size: cover;
     position: absolute;
     right: 5px;
-} */
+}
+
