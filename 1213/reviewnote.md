@@ -53,7 +53,6 @@
     <em>
     <strong>
     <span>
-    <i>
     <ins>
 
     常见的行内块元素:inline-block,不占满整行,还可以改变宽高
