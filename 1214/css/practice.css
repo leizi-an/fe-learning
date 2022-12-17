@@ -1,0 +1,55 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+div.contain{
+    width: 320px;
+    border: 1px solid black;
+}
+div>img{
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+div.content1{
+    height: 40px;
+    font-size: 20px;
+    color: #333;
+    line-height: 20px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+div.content2{
+    font-size: 12px;
+    color: #666;
+}
+.contain:hover{
+    width: 400px;
+} */
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+}
+.demo1{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    left: 0px;
+}
+.demo3{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    right: 0;
+    top: 0;
+}
+.demo2{
+    height: 100px;
+    margin: 0 10px 0 10px;
+    background-color: green;
+} */
+

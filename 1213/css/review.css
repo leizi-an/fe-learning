@@ -1,0 +1,334 @@
+/* .box{
+    font-size: 16px;
+    font-style: italic;
+    background-color: rgb(255, 0, 0);
+    line-height: 100px;
+    text-align: center;
+    border: 8px solid yellow;
+    text-decoration: underline;
+    text-indent: 2em;
+} */
+
+/* div{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border-width: 5px;
+    border-style: double;
+    border-color: brown;
+} */
+
+/* a:hover{
+    background-color: rebeccapurple;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+} */
+/* div{
+    height: 200px;
+    width: 200px;
+    background-color: coral;
+    border: 80px solid red;
+    padding: 20px 40px;
+    margin: 100px 200px;
+} */
+/* .box1{
+    height: 400px;
+    width: 400px;
+    background-color: blue;
+    padding: 50px;
+}
+.box2{
+    height: 300px;
+    width: 300px;
+    background-color: chartreuse;
+    padding: 50px;
+}
+.box3{
+    height: 200px;
+    width: 200px;
+    background-color: crimson;
+    padding: 50px;
+}
+.box4{
+    height: 100px;
+    width: 100px;
+    background-color: darkgreen;
+    padding: 50px;
+} */
+
+/* .box1{
+    height: 200px;
+    width: 200px;
+    background-color: chartreuse;
+    margin-top: 100px;
+    overflow: hidden;
+}
+.box2{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    margin-top: 50px;
+} */
+
+/* .demo1{
+    height: 100px;
+    width: 100px;
+    background-color: cornflowerblue;
+    margin-bottom: 100px;
+}
+.demo2{
+    height: 100px;
+    width: 100px;
+    background-color: darkmagenta;
+    margin-top: 100px;
+}
+.warpper{
+    overflow: hidden;
+} */
+
+/* i{
+    font-style: normal;
+    display: block;
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+} */
+/* *{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: rebeccapurple;
+}
+.demo{
+    height: 100px;
+    background-color: aqua;
+} */
+
+/* *{
+    margin: 0;
+    padding: 0;
+}
+.box1{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: deeppink;
+}
+.box2{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    top: 160px;
+} */
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+}
+.demo1{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: #fcc;
+}
+.demo2{
+    height: 100px;
+    background-color: yellow;
+} */
+
+
+/* .box{
+    position: absolute;
+    height: 182px;
+    width: 370px;
+    background-color: rgb(177, 153, 153);
+    left: 50%;
+    margin-left: -185px;
+    top: 50%;
+    margin-top: -91px;
+}
+.box1{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 10px solid blue;
+    border-radius: 50%;
+}
+.box2{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 10px solid yellow;
+    border-radius: 50%;
+    left: 50px;
+    top: 50px;
+}
+.box3{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 10px solid black;
+    border-radius: 50%;
+    left: 55px;
+    bottom: 50px;
+}
+.box4{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 10px solid green;
+    border-radius: 50%;
+    left: 50px;
+    top: 50px;
+}
+.box5{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 10px solid red;
+    border-radius: 50%;
+    left: 55px;
+    bottom: 50px;
+} */
+
+
+/* .demo1{
+    height: 500px;
+    width: 500px;
+    background-color: firebrick;
+}
+
+.content{
+        float: right;
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        color: yellow;
+        font-weight: bold;
+        font-size: larger;
+} */
+
+
+/* .demo{
+    height: 400px;
+    width: 400px;
+    background-color: aqua;
+    color: blue;
+}
+img{
+    float: left;
+    height: 100px;
+    width: 100px;
+} */
+
+
+/* *{
+    list-style: none;
+    text-decoration: none;
+    color: #424242;
+    margin: 0;
+    padding: 0;
+}
+li{
+    height: 30px;
+    width: 80px;
+    float: left;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 3px;
+}
+li>a{
+    color: #f40;
+    font-weight: bold;
+    display: inline-block;
+    width: 60px;
+    padding: 0 10px;
+}
+li>a:hover{
+    background-color: #ddd;
+} */
+
+
+/* .demo{
+    width: 400px;
+    border: 5px solid black;
+    float: left;       第一种方法
+    display: inline-block;  第二种方法
+    overflow: hidden;        第三种方法
+    position: absolute;      第四种方法
+}
+.content{
+    float: left;
+    height: 100px;
+    width: 100px;
+    background-color: springgreen;
+    color: azure;
+}
+第五种方法
+.demo::after{
+    content: "";
+    clear: both;
+    display: block;
+} */
+
+
+/* p{ 
+    height: 500px;
+    width: 500px;
+    border: 2px solid red;
+    line-height: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+  text-overflow: ellipsis;
+} */
+
+
+/* div{
+    height: 20px;
+    border: 2px solid black;
+}
+span{
+    height: 30px;
+    width: 10px;
+    display: inline-block;
+    background-color:red ;
+    vertical-align: 5px;
+} */
+
+
+/* div{
+    position: relative;
+    height: 100px;
+    width: 300px;
+    background-color: aqua;
+    line-height: 100px;
+    color: white;
+    padding: 0 50px;
+}
+div::before{
+    content: "";
+    display: inline-block;
+    height: 12px;
+    width: 11px;
+    background-image: url(https://tse4-mm.cn.bing.net/th/id/OIP-C.0-MwPYMCrlTMM0zjs1aLfgAAAA?pid=ImgDet&rs=1);
+    background-size: cover;
+    margin-right: 10px;
+}
+div::after{
+    position: absolute;
+    content: "";
+    display: inline-block;
+    height: 11.5px;
+    width: 7px;
+    background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.d57d21ba9f7d5e34d44ef14012d31113?rik=1cv1k7zgGe%2fkCA&riu=http%3a%2f%2fwww.kuaipng.com%2fUploads%2fpic%2fw%2f2020%2f10-10%2f92712%2fwater_92712_698_698_.png&ehk=o1eTNS0RYTm2AKsYyaU6ybh6NT0E5q99ATC9BqzvZbc%3d&risl=&pid=ImgRaw&r=0);
+    background-size: cover;
+    top: 50%;
+    right: 50px;
+} */
