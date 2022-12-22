@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家庭作业</title>
+</head>
+<body>
+    <!-- 2的次幂 -->
+    <!-- <script>
+        var n =  parseInt(window.prompt('请输入n'));
+        var value = 1;
+        if( n > 0){
+            for(var i = 0; i < n; i++) {
+                value = value * 2;
+            }
+        }
+        document.write(value);
+    </script>
+     -->
+    <!-- n的阶乘 -->
+    <!-- <script>
+        var n = parseInt(window.prompt('请输入n'));
+        var mul = 1;
+        for(i = 1; i <= n; i++){
+            mul *= i;
+        }
+        document.write(mul);
+    </script> -->
+    
+    <!-- 输入三个数求最大 -->
+    <!-- <script>
+        var a = parseInt(window.prompt('请输入'));
+        var b = parseInt(window.prompt('请输入'));
+        var c = parseInt(window.prompt('请输入'));
+        if( a > b){
+            if( a > c ){
+                document.write(a);
+            } else {
+                document.write(c);
+            }
+        }  else {
+            if( b > c ){
+                document.write(b);
+            } else {
+                document.write(c);
+            }
+        }
+    </script> -->
+
+    <!-- 斐波那契数列 -->
+    <!-- <script>
+        var n = parseInt(window.prompt('请输入'));
+        var first = 1;
+        var second = 1;
+        var third;
+        if (n == 1 || n==2){
+            document.write(1);
+        } else {
+            for(var i = 0 ; i < n-2 ; i++){
+            third = first + second;
+            first = second;
+            second = third;
+        }
+        document.write(third);
+        }
+    </script> -->
+
+    <!-- 打印出100以内的质数 -->
+    <!-- <script>
+        var count = 0;
+        for(var i = 0; i < 100; i++ ) {
+            for(var j = 1; j <= i; j++) {
+                if(i % j == 0) {
+                    count ++;
+                }
+            }
+            if(count == 2) {
+                document.write(i + " ");
+            }
+            count = 0;
+        }
+    </script> -->
+
+
+    <!-- 2的次幂 -->
+    <!-- <script>
+        var n = parseInt(window.prompt('请输入'));
+        var value = 1;
+        if(n > 0){
+            for(var i = 0 ; i < n ; i++){
+                value = value * 2
+            }
+        } else {
+            console.log(value);
+        }
+        console.log(value);
+    </script> -->
+
+    <!-- 阶乘 -->
+    
+    <!-- 斐波那契 -->
+     <!-- 1 1 2 3 5 8  -->
+        <!-- <script>
+            var n = parseInt(window.prompt('请输入'));
+            var first = 1;
+            var second = 1;
+            var third;
+            // var i = 0;
+            while(n - 2 > 0) {
+                third = first + second;
+                first = second;
+                second = third;
+                n--;
+            }
+            console.log(third);
+        </script> -->
+        <!-- 输入三数字求最大 -->
+        <!-- <script>
+            var a = parseInt(window.prompt('请输入'));
+            var b = parseInt(window.prompt('请输入'));
+            var c = parseInt(window.prompt('请输入'));
+            if( a > b ) {
+                if( a > c){
+                    console.log(a);
+                } else {
+                    console.log(c);
+                }
+            } else {
+                if( b > c){
+                    console.log(b);
+                } else {
+                    console.log(c);
+                }
+            }
+        </script> -->
+
+        <!-- 反向输出 -->
+        <!-- <script>
+            var n = 456;
+            var ge = 456 % 10;
+            var shi = (456 %  100 - g) / 10 ;
+            var bai = (456 - s*10 - g) / 100;
+            // b = g;
+            console.log(g, s, b);
+        </script> -->
+
+        <!-- 质数 -->
+        <!-- <script>
+            var n = 100;
+            for(var i = 2; i <= n ; i++){
+                var flag = true;
+                for(var j = 2 ; j < i; j++){
+                    if(i % j == 0){
+                        flag = false;
+                    }
+                }
+                if(flag == true){
+                    console.log(i);
+                } else {
+                    console.log(i, '不是质数');
+                }
+            } -->
+        </script>
+</body>
+</html>
