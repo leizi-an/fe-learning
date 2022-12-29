@@ -60,6 +60,7 @@
         //                        1.GO  {glob:100}
 
 
+        // 闭包
         // function a() {
         //     function b() {
         //         var bbb = 234;
@@ -89,8 +90,23 @@
 
         // 闭包做缓存
         function eater() {
-            
+            var food = "";
+
+            var obj = {
+               eat : function () {
+                document.write('I am eating' + food);
+                food = " " ;
+               },
+               push : function (myFood) {
+                food = myFood;
+               }
+            }
+            return obj;
         }
+         var eater1 = eater();
+         eater1.eat();
+         eater1.push('banana');
+         eater1.eat();
     </script>
 </body>
 </html>
