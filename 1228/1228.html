@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1228</title>
+</head>
+<body>
+    <script>
+        // function a() {
+        //     var a = 100;
+        //     function b() {
+        //         var b = 200;
+        //         function c(){
+        //             var c = 300;
+        //         }
+        //         c();
+        //     }
+        //     b();
+        // }
+        // var glob = 100;
+        // var f = 200;
+        // a();
+
+         
+        // a 定义 a.[[scope]] --> 0.GO { a:(function),glob:100,f:200}
+        // a 执行 a.[[scope]] --> 0.aAO { a:100,b:(function)}
+        //                        1.GO { a:(function),glob:100,f:200}
+        // b 定义 b.[[scope]] --> 0.aAO { a:100,b:(function)}
+        //                        1.GO { a:(function),glob:100,f:200}
+        // b 执行 b.[[scope]] --> 0.bAO { b:200,c:(function)}
+        //                        1.aAO { a:100,b:(function)}
+        //                        2.GO { a:(function),glob:100,f:200}
+        // c 定义 c.[[scope]] --> 0.bAO { b:200,c:(function)}
+        //                        1.aAO { a:100,b:(function)}
+        //                        2.GO { a:(function),glob:100,f:200}
+        // c 执行 c.[[scope]] --> 0.cAO {c:300}
+        //                        1.bAO { b:200,c:(function)}
+        //                        2.aAO { a:100,b:(function)}
+        //                        3.GO { a:(function),glob:100,f:200}
+
+
+        // function a() {
+        //     var aa = 100;
+        // }
+        // function b(){
+        //     var bb = 200;
+        // }
+        // var glob = 100;
+        // a();
+        // b();
+
+
+        // a 定义 a.[[scope]] --> 0.GO {glob:100}
+        // b 定义 b.[[scope]] --> 0.GO {glob:100}
+        // a 执行 a.[[scope]] --> 0.aAO {aa:100}
+        //                        1.GO  {glob:100}
+        // b 执行 b.[[scope]] --> 0.bAO {bb:200}
+        //                        1.GO  {glob:100}
+
+
+        // 闭包
+        // function a() {
+        //     function b() {
+        //         var bbb = 234;
+        //         document.write(aaa);
+        //     }
+        //     var aaa = 123;
+        //     return b;
+        // }
+        // var glob = 100;
+        // var demo = a();
+        // demo();  
+
+
+        // 函数累加器闭包版
+        // function add() {
+        //     var num = 0;
+        //     function b() {
+        //          num ++;
+        //          document.write(num);
+        //     }
+        //     return b;
+        // }
+        // var demo = add();
+        // demo();
+        // demo();
+
+
+        // 闭包做缓存
+        function eater() {
+            var food = "";
+
+            var obj = {
+               eat : function () {
+                document.write('I am eating' + food);
+                food = " " ;
+               },
+               push : function (myFood) {
+                food = myFood;
+               }
+            }
+            return obj;
+        }
+         var eater1 = eater();
+         eater1.eat();
+         eater1.push('banana');
+         eater1.eat();
+    </script>
+</body>
+</html>

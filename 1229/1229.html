@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1229</title>
+</head>
+<body>
+      <script>
+        // var test = function () {
+        //     document.write('a');
+        // } ();
+        // 这样就可以被执行，但是执行完函数立即被销毁
+        // + function test() {
+        //     document.write('a');
+        // } ();
+        // 这样也可以,因为加号总想把你变成数据表达式,不管变没变成它都想转换成表达式,又因为表达式都可以执行,所以就可以执行了
+        // (function test() {
+        //     document.write('a');
+        // }) ()
+
+        // function test() {
+        //     var num = 123;
+        //     (function () {
+        //         document.write(num);
+        //     } () )
+        // }
+        // test();
+        
+        // 解决闭包*******嘎嘎重要
+        // function test() {
+        //     var arr = [];
+        //      for(var i = 0; i < 10; i++) {
+        //         (function (j) {
+        //             arr[j] = function () {
+        //                 document.write(j);
+        //             }
+        //         }(i))
+        //      }
+        //      return arr;
+        // }
+        // var demo = test();
+        // for(var j = 0; j < 10; j++) {
+        //     demo[j] ();
+        // }
+
+
+        // function test() {
+        //     var a = b = 10;
+        // }
+        //     test ();
+        //     document.write(window.a,window.b);
+
+    //    function fn(a) {
+    //     document.write(a);
+    //      var a = 123;
+    //      document.write(a);
+    //      function a() {}
+    //      document.write(a);
+    //      document.write(b);
+    //      var b = function () {}
+    //      document.write(b);
+    //      function d () {}
+    //    }
+    //    fn(1);
+
+    // //    预编译
+    //      AO = {
+    //         // a: undefined <---> 1
+    //         // a: 1;        <---> function () {}
+    //         // a : function () {...}  <---> 123
+    //         a: 123
+    //         b: undefined
+    //         d: function () {...}
+    //      }
+
+    
+    // function test() {
+    //     a();
+    //     function a() {}
+    // }
+    // test();
+
+    // AO = {
+    //     a : function () {}
+    // }
+    // 预编译也就解释了为什么把a();放前面也能执行了
+
+
+    // function test(a,b) {
+    //     document.write(a);
+    //     c = 0;
+    //     var c;
+    //     a = 3;
+    //     b = 2;
+    //     document.write(b);
+    //     function b() {}
+    //     function d() {}
+    //     document.write(b);
+    // }
+    // test(1);
+
+
+    // AO = {
+    //     a : undefined  ---> 1 --->3
+    //     b : undefined  ---> function() {}  ---> 2
+    //     c : undefined  ---> 0
+    //     d : function() {}
+    // }
+
+    // var a = 10;
+    // document.write(a);
+
+    // function test() {
+    //     document.write(f);
+    //     f = 30;
+    //     var f;
+    // }
+    // var f = 20;
+    // test();
+    // document.write(f);
+
+    // 0.AO = {
+    //     f : undefined 
+    // }
+    // 1.GO = {
+    //     f : 20
+    // }
+
+    // b = 200;
+    // function test() {
+    //     document.write(b);
+    //     b = 300;
+    // }
+    // test();
+    // var b;
+    // function b() {}
+
+    // 0.AO = {
+        
+    // }
+    // 1.GO = {
+    //     b : undefined ---> function b() {}   ---> 200
+    // }
+
+
+    // var fn;
+    // function fn(fn) {
+    //     fn = 1;
+    //     document.write(fn);
+    //     var fn = function () {}
+    //     document.write(fn);
+    //     function fn() {}
+    // }
+    // fn(2);
+    // fn = 20;
+    // document.write(fn);
+
+    // 0.AO = {
+    //     fn : undefined ---> 2 ---> function () {}  ---> 1 ---> function () {}
+    // }
+    // 1.GO = {
+    //     fn : function fn(fn)
+    // }
+    
+
+    // function test() {
+    //     document.write(i);
+    //     for(var i = 0; i < 10; i++) {
+
+    //     }
+    //     document.write(i);
+    // }
+    // test();
+
+    
+    // 第一题
+    // function bar() {
+    //     return foo;
+    //     foo = 10;
+    //     function foo() {
+
+    //     }
+    //     var foo = 11;
+    // }
+    // document.write(bar());
+
+    // 第二题
+    // document.write(bar());
+    // function bar() {
+    //     foo = 10;
+    //     function foo() {}
+    //     var foo = 11;
+    //     return foo;
+    // }
+
+    
+      </script>
+</body>
+</html>
