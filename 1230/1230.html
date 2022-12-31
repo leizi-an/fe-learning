@@ -176,12 +176,62 @@
         // var str = "abcd";
         // str.length     ---> new String("abcd").length   这个隐式的过程就称为包装类，用一次就不用了
         
-        var num = 123;
-        num.name = 'abcd';
-        num.age = 234;
-        num.sex = 'male';
-        console.log(num.name,num.age,num.sex);
+        // var num = 123;
+        // num.name = 'abcd';
+        // // new Number(123).name = 'abcd'
+        // // delete
+        // num.age = 234;
+        // // new Number(123),age = 234;
+        // // delete
+        // num.sex = 'male';
+        // // new Number(123).sex = 'male';
+        // // delete
+        // // new Number(123).name,new Number(123).age,new Number(123).sex
+        // console.log(num.name,num.age,num.sex);
 
+
+        // 练习题
+
+        // var foo = {n : 1};
+        // var bar = foo;
+        // foo.x = foo = {n : 2};
+        // console.log(foo.x);
+
+
+        // function employee(name,code) {
+        //     this.name = "wangli";   //这块是写死的了，所以下面传什么都没有用因为这块不是 this.name = name
+        //     this.code = "A001";     //这块是写死的了，所以下面传什么都没有用因为这块不是 this.name = name
+        // }
+        // newemp = new employee("zhangming",'A002');
+        // document.write("雇员姓名:" + newemp.name + "<br>");
+        // document.write("雇员代号:" + newemp.code + "<br>");
+
+
+        // var str = "abc";
+        // str += 1;
+        // var test = typeof(str);
+        // if(test.length == 6) {
+        //     test.sign = "typeof的返回结果可能是String";
+        // }
+        // document.write(test.sign);
+        //test。sign 是原始值无论能不能赋进去值，最后出来都是undefined
+
+
+        // var str = false + 1;
+        // document.write(str);//1
+        // var demo = false == 1;
+        // document.write(demo);//false
+        // if(typeof(a)&& -true + (+undefined) + "") {
+        //     document.write('基础扎实');
+        // }
+        // //在2乘字符串11的时候，就已经把他变成字符串11了结果就是22
+        // if(11 + '11' * 2 == 33) {
+        //     document.write('基础扎实');
+        // } 
+        // !!"" + !!"" -!!false || document.write('你觉能打印你就是猪');
+
+
+        
     </script>
 </body>
 </html>
