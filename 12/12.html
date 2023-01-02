@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+    <script src="../12/12.js"></script>
+</head>
+<body>
+    <script>
+        //  区分数组和对象
+        // function isArrayOrObject (target) {
+        //     var toStr = Object.prototype.toString;
+        //         arrStr = '[object Array]';
+        //     if(toStr.call(target) === arrStr) {
+        //         return 'this is Array';
+        //     } else {
+        //         return 'this is Object';
+        //     }
+        // }
+
+
+        // 能把所有类型的数据都判断出来
+        // function type(target) {
+        //     var typeStr = typeof(target),
+        //         toStr = Object.prototype.toString,
+        //         objStr = {
+        //             '[object Object]' : 'object - object',
+        //             '[object Array]' : 'array -object',
+        //             '[object Number]' : 'number - object',
+        //             '[object Boolean]' : 'boolean - object',
+        //             '[pbject String]' : 'string - object'
+        //         } 
+        //     if(target === null) {
+        //         return null;
+        //     }
+        //     if(typeStr === 'function') {
+        //         return 'function';
+        //     }
+        //     if(typeStr !== 'object') {
+        //         return typeStr;
+        //     } else {
+        //         return objStr[toStr.call(target)];
+        //     }
+        // }
+
+
+        // var num = (function (n) {
+        //     if(n == 1) {
+        //         return 1;
+        //     }
+        //     return n * arguments.callee(n - 1);
+        // }(5))
+
+
+        // function demo (){
+        //     test();
+        // }
+        // function test() {
+        //     console.log(test.caller);
+        // }
+        // demo();
+
+
+        // 把obj的东西克隆到了obj1的身上
+        // var obj = {
+        //     name : 'abc',
+        //     age : 15
+        // }
+        // var obj1 = {
+
+        // }
+        // for (var prop in obj) {
+        //     obj1[prop] = obj[prop];
+        // }
+
+
+        // 浅层拷贝会改变引用值
+        // var obj = {
+        //     name : 'abc',
+        //     age : 16,
+        //     card : ['master','vip','svip' ]
+        // }
+        // var obj1 = {
+
+        // }
+        // function extend (origin,target) {
+        //     for (var prop in origin) {
+        //         target[prop] = origin[prop];
+        //     }
+        // }
+
+
+        // var arr = [1,2,3,4,5,6];
+
+
+        // 深层克隆
+        // var obj1 = {
+        //     name : 'abc',
+        //     age : 123,
+        //     card : ['vip','svip','666']
+        // }
+        // var obj = {
+
+        // }
+        // function deepClone(origin,target) {
+        //     var target = target || {},
+        //          arrStr = 'array - object';
+        //     for(var prop in origin) {
+        //         if(origin.hasOwnProperty(prop)) {
+        //             if(typeof(origin[prop] === "object")) {
+        //                 if(type(origin[prop] == arrStr)) {
+        //                     target[prop] = [];
+        //                 } else {
+        //                     target[prop] = {};
+        //                 }
+        //                 deepClone(origin[prop],target[prop]);
+        //             } else {
+        //                 target[prop] = origin[prop];
+        //             }
+        //         }
+        //     }
+        //     return target;
+        // }
+
+
+        // var arr = new Array(1,2,3,4,5);
+        // var arr1 = [1,2,3,4,5,6,7,8,9]
+
+
+        // var arr = [];
+
+
+        // 手写push方法
+        // Array.prototype.push = function () {
+        //     for(var i = 0; i < arguments.length; i ++) {
+        //         this[this.length] = arguments[i];
+        //     }
+        // }
+        // var arr = [];
+
+
+        // var arr = [5,1,5,6,7,123,2,72,4,5,7,8];
+        // arr.sort(function (a,b) {
+        //     if(a > b) {
+        //         return a - b;
+        //     } else {
+        //         return a - b;
+        //     }
+        // });
+
+
+        // 以上的简化
+        // var arr = [5,1,5,6,7,123,2,72,4,5,7,8];
+        // arr.sort(function (a,b) {
+        //     return a - b;
+        // });
+
+
+        // 对数组里面的对象进行排序
+        // var arr = [
+        //     {name : "apple", age : 15},
+        //     {name : "superman",age : 1000},
+        //     {name : "blackman",age : 200},
+        //     {name : "hangwang",age : 52000}
+        // ]
+        // arr.sort(function (a,b) {
+        //     return a.age - b.age;
+        // });
+
+
+        // 让数组乱序
+        // var arr = [1,2,3,4,5,6,7,8];
+        // arr.sort(function (a,b) {
+        //         return Math.random() - 0.5;
+        // });
+
+
+        // var arr = [1,2,3];
+        // var arr1 = [4,5,6];
+        // var arr2 = arr.concat(arr1);
+
+
+        // var arr = [1,2,3];
+        // Array.prototype.slice = function () {
+
+        // }
+
+
+        // 闭包
+        // function a() {
+        //     var aaa = 123;
+        //     function b() {
+        //         console.log(aaa);
+        //     }
+        //     return b;
+        // }
+        // var demo = a();
+        // demo();
+
+
+        // 通过闭包循环出10个10
+        // function  a() {
+        //     var arr = [];
+        //     for(var i = 0; i < 10; i++) {
+        //         arr[i] = function() {
+        //             console.log(i);
+        //         }
+        //     }
+        //     return arr; 
+        // }
+        // var demo = a();
+        // for(var j = 0; j < 10; j++) {
+        //     demo[j]();
+        // }
+
+
+        // 通过闭包让0到9都循环出来
+        // function a() {
+        //     var arr = [];
+        //     for(var i = 0; i < 10; i++) {
+        //         (function(canshu){
+        //             arr[canshu] = function() {
+        //                 console.log(canshu);
+        //             }
+        //         }(i))
+        //     }
+        //     return arr;
+        // }
+        // var demo = a();
+        // for(var j = 0; j < 10;j++) {
+        //     demo[j]();
+        // }
+
+
+        // 继承
+        
+
+        //浅拷贝
+        // var obj = {
+        //     name : 'jingrui',
+        //     age : 20,
+        // }
+        // var obj1 = {
+
+        // }
+        // function extend(origin,target) {
+        //     for(var prop in obj) {
+        //         target[prop] = origin[prop];
+        //     }
+        // }
+
+
+        // 深拷贝
+        // var obj = {
+        //     name : 'jingrui',
+        //     age : 20,
+        //     card : ['vip','svip','666']
+        // }
+        // var obj1 = {
+
+        // }
+        // function deepClone(origin,target) {
+        //     var target = target || {},
+        //         arrStr = 'array - object';
+        //         for(var prop in obj) {
+        //             if(type(target) == arrStr){
+
+        //             } else {
+        //                 return target[prop] = origin[prop];
+        //             }
+        //         }
+        // }
+
+
+        // 链式调用
+        // var obj = {
+        //     name : 'jingrui',
+        //     age : 20,
+        //     drink : 'drink',
+        //     play : 'playcomputer'
+        // }
+
+        function myNew(func,age,name) {
+            this.func = Person;
+            this.age = 27;
+            this.name = 'anlei';
+        } 
+        var anlei = myNew(Person,27,'anlei');
+        console.log(anlei);
+    </script>
+</body>
+</html>
