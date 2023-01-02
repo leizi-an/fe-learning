@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1230</title>
+</head>
+<body>
+    <script>
+        // a = 100;
+        // function demo(e) {
+        //     function e() {}
+        //     arguments[0] = 2;
+        //     document.write(e);//2
+        //     if(a) {           //这里因为a是undefined,转换成Boolean值是false不会执行，所以b不可能等于123
+        //         var b = 123;
+        //         function c() {//理论来说if里面不让写函数，1有的浏览器可以打印出来function
+        //             //猪都可以
+        //         }
+        //     }
+        //     var c;
+        //     a = 10;
+        //     var a;
+        //     document.write(b);//undefined
+        //     f = 123;
+        //     document.write(c);//function c() {}
+        //     document.write(a);//10
+        // }
+        // var a;
+        // demo(1);
+        // document.write(a);//100
+        // document.write(f);//123
+
+        // AO = {
+        //     e : undefined --> 1 --> function e() {} --> 2
+        //     b : undefined --> 123
+        //     c : undefined --> function c() {}
+        //     a : undefined --> 10
+        // }
+        // GO = {
+        //     f : 123
+        //     a : 100
+        //     demo : function
+        // }
+
+
+        // var x = 1, y = z = 0;
+        // function add(n) {
+        //     return n = n + 1;
+        // } 
+        // y = add(x);
+        // function add(n) {     //后面的函数覆盖上面的
+        //     return n = n + 3;
+        // }
+        // z = add(x);
+
+        // window.foo || window.foo = 'bar';
+        // document.write(window.foo);
+
+        // var a = 123;
+        // console.log(a);
+
+        // 对象
+        // var jr = {
+        //     name : "jingrui",
+        //     age : 19,
+        //     sex : "male",
+        //     play : function () {
+        //         console.log('i am playing');
+        //     }
+        // }
+
+        // var deng = {
+        //     name : "laodeng",
+        //     sex : "male",
+        //     age : 35,
+        //     wife : "xiaoliu",
+        //     son : "xiaodeng",
+        //     health : 100,
+        //     smoke : function () {
+        //         this.health--;
+        //     },
+        //     workout : function () {
+        //         this.health++;
+        //     }
+        // }
+
+        // var jing = {
+        //     name : "jingrui",
+        //     age : 20,
+        //     sex : "male",
+        //     knowledge : 100,
+        //     study : function () {
+        //         this.knowledge++;
+        //     },
+        //     playgame : function () {
+        //         this.knowledge--;
+        //     }
+        // }
+
+        // var deng = {
+        //     name : "laodeng",
+        //     sex : "male",
+        //     age : 35,
+        //     wife : {
+        //         name : "xiaoliu",
+        //         age : 30,
+        //         complain : function () {
+        //             console.log('my husband is shit!!!');
+        //         }
+        //     },
+        //     son : {
+        //         name : "xiaodeng",
+        //         age : 5,
+        //         sayname : function () {
+        //             console.log(this.name);
+        //         }
+        //     },
+        //     health : 100,
+        //     smoke : function () {
+        //         this.health--;
+        //     },
+        //     workout : function () {
+        //         this.health++;
+        //     }
+        // }
+
+
+        //构造函数
+        // function Car (color,owner) {
+        //     this.owner = owner;
+        //     this.color = color;
+        //     this.name = "Maserati";
+        //     this.height = 1400;
+        //     this.lang = 4950;
+        //     this.power = 100;
+        //     this.run = function () {
+        //         this.power--;
+        //     }
+        // }
+        // var car1 = new Car('blue','deng');
+        // var car2 = new Car('red','cheng');
+
+
+        // function student (name,age,sex) {
+        //     // var this = {
+        //     //     grand = 2020,
+        //     //     name = 'jr',
+        //     // };
+        //     this.grand = 2020;
+        //     this.name = name;
+        //     this.age = age;
+        //     this.sex = sex;
+
+        //     //return this;
+        // }
+        // var student1 = new student('jr',20,'male');
+        // var student2 = new student('cheng',40,'male');
+
+
+        // function Test (name,age) {
+        //     var that = {};
+        //     that.name = name;
+        //     that.age = age;
+        //     return that;
+        // }
+        // var test = Test('abc',123);
+
+        
+        // var str = new String('abcd');
+        // var num = new Number(123);
+        // var boo = new Boolean(true);
+
+
+        // var str = "abcd";
+        // str.length     ---> new String("abcd").length   这个隐式的过程就称为包装类，用一次就不用了
+        
+        // var num = 123;
+        // num.name = 'abcd';
+        // // new Number(123).name = 'abcd'
+        // // delete
+        // num.age = 234;
+        // // new Number(123),age = 234;
+        // // delete
+        // num.sex = 'male';
+        // // new Number(123).sex = 'male';
+        // // delete
+        // // new Number(123).name,new Number(123).age,new Number(123).sex
+        // console.log(num.name,num.age,num.sex);
+
+
+        // 练习题
+
+        // var foo = {n : 1};
+        // var bar = foo;
+        // foo.x = foo = {n : 2};
+        // console.log(foo.x);
+
+
+        // function employee(name,code) {
+        //     this.name = "wangli";   //这块是写死的了，所以下面传什么都没有用因为这块不是 this.name = name
+        //     this.code = "A001";     //这块是写死的了，所以下面传什么都没有用因为这块不是 this.name = name
+        // }
+        // newemp = new employee("zhangming",'A002');
+        // document.write("雇员姓名:" + newemp.name + "<br>");
+        // document.write("雇员代号:" + newemp.code + "<br>");
+
+
+        // var str = "abc";
+        // str += 1;
+        // var test = typeof(str);
+        // if(test.length == 6) {
+        //     test.sign = "typeof的返回结果可能是String";
+        // }
+        // document.write(test.sign);
+        //test。sign 是原始值无论能不能赋进去值，最后出来都是undefined
+
+
+        // var str = false + 1;
+        // document.write(str);//1
+        // var demo = false == 1;
+        // document.write(demo);//false
+        // if(typeof(a)&& -true + (+undefined) + "") {
+        //     document.write('基础扎实');
+        // }
+        // //在2乘字符串11的时候，就已经把他变成字符串11了结果就是22
+        // if(11 + '11' * 2 == 33) {
+        //     document.write('基础扎实');
+        // } 
+        // !!"" + !!"" -!!false || document.write('你觉能打印你就是猪');
+
+
+        
+    </script>
+</body>
+</html>

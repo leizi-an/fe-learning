@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+</head>
+<body>
+    <script>
+    //   var jing = {
+    //     smoke : function () {
+    //         console.log('smoke cool');
+    //         return this;
+    //     },
+    //     drink : function () {
+    //         console.log('drink cool');
+    //         return this;
+    //     },
+    //     firehair : function () {
+    //         console.log('firehair cool');
+    //         return this;
+    //     }
+    //   }
+
+
+        // 例1
+        //  var name = "222";
+        //  var a = {
+        //     name : "111",
+        //     say : function () {
+        //         console.log(this.name);
+        //     }
+        //  }
+        //  var fun = a.say;
+        //  fun();//222
+        //  a.say();//111
+        //  var b = {
+        //     name : "333",
+        //     say : function (fun) {
+        //         fun();          
+        //     }
+        //  }
+        //  b.say(a.say);//222
+        //  b.say = a.say;
+        //  b.say();//333
+
+
+        // 例2
+        // var name = 'window';
+        // var obj = {
+        //     name : 'obj',
+        //     child : {
+        //         name : 'child',
+        //         getName : function () {
+        //             return this.name;
+        //         }
+        //     }
+        // }
+        // console.log(obj.child.getName());
+        // var getName = obj.child.getName;
+        // console.log(getName()); 
+
+
+        // 例3
+        // function fun(n,o) {
+        //     console.log(o);
+        //     return {
+        //         fun : function (m) {
+        //             return fun(m,n);
+        //         }
+        //     }
+        // }
+        // var x = fun(0);
+        // x.fun(1);
+        // var y = fun(0).fun(1).fun(2);
+        // var z = fun(0).fun(1);
+        // z.fun(2);
+        // z.fun(3);
+
+
+        // var obj = {
+        //     age : 123,
+        //     sex : 'male'
+        // }
+
+
+        // function getProp(num) {
+        //     var obj = {
+        //         friend1 : 'a',
+        //         friend2 : 'b',
+        //         friedn3 : 'c'
+        //     }
+        //     console.log(obj['friend' + num]);
+        // }
+        // getProp(1);
+
+        
+        // Person.prototype = {
+        //     name : "sunny"
+        // }
+        // function Person() {
+
+        // }
+        // var person = new Person();
+        // Person.prototype = {name : 'cherry'};
+        // var person1 = new Person();
+
+
+        //  var obj = {
+        //     name : 'jing',
+        //     age : 12,
+        //     sex : 'male'
+        //  }
+        //  for(var prop in obj) {
+        //     console.log(obj[prop]);
+        //  }
+
+        // var car = {
+        //     carname : 'benci',
+        //     carheight : 1400,
+        //     carwidth : 4950,
+        //     carcolor : 'red'
+        // }
+        // for (var i in car) {
+        //     console.log(car[i]);
+        // }
+
+
+        // Person.prototype.name = 'abc';
+        // function Person() {
+        //     this.age = 123;
+        //     this.sex = 'female';
+        // }
+        // var person = new Person();
+        // for (var prop in person) {
+        //     if(person.hasOwnProperty(prop)){
+        //         console.log(person[prop]);
+        //     }
+        // }
+
+
+        // var obj = {
+        //     name : "abc",
+        //     age : 12,
+        //     height : 150
+        // }
+        // console.log('age' in obj);
+
+
+        //  function Grand() {
+
+        //  }
+        //  Person.prototype = new Grand ();
+        //  function Person() {
+
+        //  }
+        //  var person = new Person();
+        //  var obj = {};
+
+
+        // Array.prototype.toString = function () {
+        //     return "6666"
+        // }
+        // var arr = [];
+        // document.write(arr);
+
+
+        
+    </script>
+</body>
+</html>

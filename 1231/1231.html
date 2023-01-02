@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1231</title>
+</head>
+<body>
+    <script>
+        // Person.prototype.name = 'jing';
+        // Person.prototype.money = 'more';
+        // Person.prototype.card = ['visa','master'];
+        // function Person() {
+        //     this.money = 'less';
+        // }
+        // var person = new Person();
+
+
+        // Car.prototype.constructor = function () {
+        //     console.log('hh');
+        // }
+        // Car.prototype.height = 1400;
+        // Car.prototype.width = 4950;
+        // Car.prototype.carName = 'maserati';
+        // function Car(color,owner) {
+        //     this.owner = owner;
+        //     this.color = color;
+        // }
+        // var car1 = new Car('red','zhangsan');
+        // var car2 = new Car('green','lisi');
+        // var car3 = new Car('blue','wangwu');
+
+
+        // Phone.prototype.height = 50;
+        // Phone.prototype.width = 20;
+        // Phone.prototype.xinghao = 'ipone14';
+        // function Phone(color,owner) {
+        //     this.color = color;
+        //     this.owner = owner;
+        // }
+        // var phone1 = new Phone('blue','zhangsan');
+        // var phone2 = new Phone('black','wangwu');
+
+
+        // Car.prototype = {
+        //     height : 1400,
+        //     width : 4950,
+        //     carName : 'marserati',
+        //     constructor : Car
+        // }
+        // function Car(owner,color) {
+        //     this.owner =owner;
+        //     this.color= color;
+        // }
+        // var car1 = new Car('red','zhangsan');
+        // var car2 = new Car('green','lisi');
+        // var car3 = new Car('blue','wangwu');
+
+
+        //原型链
+        // GrandFOO.prototype.lastName = "jing";
+        // function GrandFOO () {
+
+        // }
+        // var grandFoo = new GrandFOO;
+        // Foo.prototype = grandFoo;
+        // function Foo() {
+        //     this.money = 100;
+        // }
+        // var foo = new Foo;
+        // Son.prototype = foo;
+        // function Son() {
+        //     this.age = 18;
+        // }
+        // var son = new Son();
+        // console.log(son.abc);
+        // son.money = 200;
+
+
+    //    var obj = {};
+    //    document.write(obj);
+
+
+    // function a(name,age) {
+    //     this.name = name;
+    //     this.age = age;
+    // }
+    // var obj = {};
+    // function test() {
+    //     a.apply(obj,arguments);
+    // }
+    // test('wangwu',123);
+
+
+    // function PublicPerson(name,age,sex) {
+    //     this.name = name;
+    //     this.age = age;
+    //     this.sex = sex;
+    // }
+    // function Person(name,age,sex,aihao) {
+    //     PublicPerson.apply(this,[name,age,sex]);
+    //     this.aihao = aihao;
+    // }
+    // var person = new Person('xiaozhang',12,'female','ball');
+
+    
+    // var obj = {
+    // };
+    // function test(name,age) {
+    //     this.name = name;
+    //     this.age = age;
+    // }
+    // test.call(obj,'zhangsan',16);
+   
+ 
+    // Grand.prototype.lastName = 'jing';
+    // function Grand() {}
+    // var grand = new Grand();
+    // Foo.prototype = grand;
+    // function Foo() {}
+    // var foo = new Foo();
+    // Person.prototype = foo;
+    // function Person() {}
+
+
+    // Person.prototype.lastName = 'jing';
+    // function Person() {
+
+    // }
+    // F.prototype = Person.prototype;
+    // function F() {}
+    // var f = new F();
+    // PersonAnother.prototype = f;
+    // PersonAnother.prototype.age = 16;
+    // function PersonAnother() {}
+    
+
+    // 圣杯模式
+    // function inherit(Origin,Target) {
+    //     function F() {};   //F负责产生一个原型链
+    //     F.prototype = Origin.prototype;          //让F去承接Origin的原型(共享原型)
+    //     Target.prototype = new F();              //让f生产一个对象给target 
+    //     Target.prototype.constructor = Target;
+    //     Target.prototype.uber = Origin.prototype;   
+    // }
+    // Person.prototype.lastName = 'jing';
+    // function Person() {}
+    // function Son() {}
+    // inherit(Person,Son);
+    // Son.prototype.age = 123;
+    // var son = new Son;
+
+
+    // 圣杯模式高大上版本
+    var inherit = (function () {
+        var F = function () {};
+        return function (Origin,Target) {
+            F.prototype = Origin.prototype;          
+            Target.prototype = new F();              
+            Target.prototype.constructor = Target;
+            Target.prototype.uber = Origin.prototype;
+        }
+    }())
+    </script>
+</body>
+</html>
