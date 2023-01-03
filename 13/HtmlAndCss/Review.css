@@ -1,0 +1,83 @@
+/* .jr:hover{
+    text-decoration: none;
+    background-color: aqua;
+    font-size: 50px;
+    font-weight: bold;
+} */
+/* .demo1 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    overflow: hidden;
+    margin-top: 200px;
+}
+.demo2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin-top: 100px;
+   
+} */
+/* .demo1{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin-top: 100px;
+}
+.demo2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin-bottom: 100px;
+}
+.wrapper{
+    overflow: hidden;
+} */
+/* .wrapper {
+    border: 4px solid black;
+   
+}
+.demo1 {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.demo2 {
+    
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+.demo3 {
+    
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+.wrapper::after {
+    content: " ";
+    display: block;
+    clear: both;
+} */
+/* div {
+    width: 400px;
+    height: 100px;
+    line-height: 16px;
+} */
+/* p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+/* div.wrapper {
+    height: 20px;
+    border: 2px solid black;
+}
+span {
+    vertical-align: 5px ;
+} */

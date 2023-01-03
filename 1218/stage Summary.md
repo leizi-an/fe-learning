@@ -93,7 +93,7 @@ overflow: hidden;
 text-overflow: ellipsis;     这三个标签加在一起可以实现单行打点
 
 background-size:cover;（用且仅用一张图片来铺满整个容器）
-bcakground-size:contain;(保证背景图片至少有完整的一张)
+background-size:contain;(保证背景图片至少有完整的一张)
 
 vertical-align: middle; 可以让这一行的文字对齐（把他放在这个文字的标签里面，或者这一横行的文字里面）    设置的是对齐线
 
