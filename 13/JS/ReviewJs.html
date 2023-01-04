@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // document.write(parseInt('12',16));
+        // for(var i = 0; i < 100; i++) {
+        //     if( i % 2 == 0) {
+        //         document.write(i + " ")
+        //     }
+        // }
+        // for(var i = 0;i <= 100; i++){
+        //     document.write(i + " ");
+        // }
+
+        // 2的次幂
+        // var n = parseInt(window.prompt("input"));
+        // var value = 1
+        // if( n > 0) {
+        //     for(var i = 0; i < n; i ++ ) {
+        //         value *= 2;
+        //     }
+        //     document.write(value);
+        // } else {
+        //     document.write(1);
+        // }
+
+        // 阶乘
+        // var n = parseInt(window.prompt("input"));
+        // var value = 1;
+        // for(var i = 1; i < n + 1; i ++) {
+        //     value = value * i;
+        // }
+        // document.write(value);
+
+        // 斐波那契
+        // var n = parseInt(window.prompt("input"));
+        // var first = 1;
+        // var second = 1;
+        // var third ;
+        // if( n == 1 || n ==2){
+        //     document.write(1);
+        // } else {
+        //     for(var i = 0 ; i < n - 2; i++) {
+        //     third = first + second;
+        //     first = second;
+        //     second = third;
+        //     }
+        // document.write(third);
+        // }
+
+        // 反向输出
+        // var a = 456;
+        // var tail = 456 % 10;
+        // var mid = (( 456 % 100 ) - tail) / 10;
+        // var head = (( 456 % 1000 ) - mid *10 - tail ) /100;
+        // document.write(tail,mid,head);
+
+        // 三数求最大
+        // var a = parseInt(window.prompt(""));
+        // var b = parseInt(window.prompt(""));
+        // var c = parseInt(window.prompt(""));
+        // if(a > b) {
+        //     if(a > c) {
+        //         document.write(a);
+        //     } else {
+        //         document.write(c);
+        //     }
+        // } else if (b > a){
+        //     if(b > c) {
+        //         document.write(b);
+        //     } else {
+        //         document.write(c);
+        //     }
+        // }
+
+        // 求100以内质数
+        // var count = 0;
+        // for(var i = 2; i < 100; i ++) {
+        //     for(var j = 1; j <= i; j++) {
+        //         if(i % j == 0) {
+        //             count ++;
+        //         }
+        //     }
+        //     if(count == 2) {
+        //         document.write(i + " ");
+        //     } else {
+        //         document.write( i + "不是质数");
+        //     }
+        //     count = 0;
+        // }
+
+        // 类型判断
+        // alert(typeof(a));//undefined
+        // alert(typeof(NaN));//number
+        // alert(typeof(null));//object
+        // alert(typeof(undefined));//undefined
+        // var a = "123abc";
+        // alert(typeof(+a));//number
+        // alert(typeof(!a));//boolean
+        // var a;
+        // alert(typeof(a + ""));//string
+        // alert(typeof( 1 == "1"));//boolean
+        // alert(typeof( NaN == NaN ));//boolean
+        // alert(typeof(NaN == undefined));//boolean
+        // alert(11+'11');//1111
+        // alert(1 === "1");//false
+        // alert(parseInt('123abc'));
+        // var num = 123.456789;
+        // alert(num.toFixed(5));//保留5位小数并且四舍五入
+        // alert(typeof(typeof(a)));//string
+
+        // function add() {
+        //     var sum = 0;
+        //     for(var i = 0; i < arguments[i]; i ++) {
+        //         sum += arguments[i];
+        //     }
+        //     document.write(sum);
+        // }
+        // add(1,2,3,4,5,6,7,8,9);
+
+        // var arr = [123,undefined,NaN,'abc'];
+        // for(var i = 0; i < arr.length; i ++) {
+        //     document.write(arr[i]);
+        // }
+
+        // function add () {
+        //     for(var i = 0; i < arguments[i]; i ++) {
+        //         document.write(arguments[i]);
+        //     }
+        // }
+        // add(1,2,3,4,5,6,7,8,9);
+
+        // 动物叫声
+        // function scream(animal) {
+        //     switch(animal) {
+        //         case 'dog' :  
+        //         document.write('wangwang');
+        //         break;
+        //         case 'cat' :
+        //         document.write('miaomiao');
+        //         break;
+        //         case 'pig' :
+        //         document.write('hengheng');
+        //         break;
+        //     }
+        // }
+        // scream();//怎实现在弹窗上输入内容就可以让代码运行
+        
+        // 加法计数
+        // function add() {
+        //     var sum = 0;
+        //     for(var i =0; i < arguments[i]; i ++) {
+        //         sum += arguments[i];
+        //     }
+        //     document.write(sum);
+        // }
+        // add(1,2,3,4,5);
+
+        // 递归实现n的阶乘
+        // function mul(n) {
+        //     if( n == 1 ) {
+        //         return 1;
+        //     } else {
+        //         return n * mul( n - 1 );
+        //     }            
+        // }
+
+        // 递归实现斐波那契数列
+        // function fb(n) {
+        //     if( n == 1 || n ==2){
+        //         return 1;
+        //     } else {
+        //         return fb(n - 1) + fb(n-2);
+        //     }
+        // }
+    </script>
+</body>
+</html>
