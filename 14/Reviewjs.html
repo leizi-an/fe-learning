@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14</title>
+</head>
+<body>
+    <script>
+        // // 2的次幂
+        // var n = parseInt(window.prompt(''));
+        // var value = 1;
+        // if( n > 0){
+        //     for(var i = 0; i < n; i++ ) {
+        //         value *= 2;
+        //     }
+        //     document.write(value);
+        // } else {
+        //     document.write(1);
+        // }
+
+        // 阶乘
+        // var n = parseInt(window.prompt(''));
+        // var value = 1;
+        // if( n > 0) {
+        //     for(var i = 1; i <= n; i++) {
+        //         value *= i;
+        //     }
+        //     document.write(value);
+        // } else {
+        //     document.write(1);
+        // }
+
+        // 递归法解决阶乘
+        // function mul() {
+        //     if( n == 0 || n == 1) {
+        //         return 1;
+        //     } else {
+        //         return  n * mul(n-1);
+        //     }
+            
+        // }
+
+        // 斐波那契
+        // var n = parseInt(window.prompt(''));
+        // var first = 1;
+        // var second = 1;
+        // var third;
+        // if( n == 1 || n == 2) {
+        //     document.write(1);
+        // } else {
+        //     for(var i = 0; i < n - 2; i ++) {
+        //     third = first + second;
+        //     first = second;
+        //     second = third;
+        // }
+        // document.write(third);
+        // }
+
+        // 递归解决斐波那契
+        // function fb() {
+        //     if( n == 1 || n ==2) {
+        //         return 1;
+        //     } else {
+        //         return fb(n - 1) + fb( n - 2);
+        //     }
+        // }
+
+        // 求100以内质数
+    // var count = 0;
+    // for(var i = 2; i < 100; i ++) {
+    //     for(var j = 1; j <= i; j++) {
+    //         if(i % j == 0 ) {
+    //             count ++;
+    //         } 
+    //     }
+    //     if( count == 2) {
+    //         document.write(i + " ");
+    //     } else {
+    //         document.write( i + "不是质数");
+    //     }
+    //     count =0;
+    // }
+
+    // 累加器
+    // function add() {
+    //     var arr = [];
+    //     var sum = 0;
+    //     for(var i = 0; i < arguments[i]; i ++) {
+    //         sum += arguments[i];
+    //     }
+    //     console.log(sum);
+    // }
+    // add(1,2,3,4,5);
+
+    // 动物叫声
+    // function scream(animal) {
+    //     switch(animal) {
+    //         case 'dog' :
+    //         document.write('wangwang');
+    //         break;
+    //         case 'cat' :
+    //         document.write('miaomiao');
+    //         break;
+    //     }
+    // }
+    // scream('dog');
+
+    // function a() {
+    //     var a = 100;
+    //     function b() {
+    //         var b = 200;
+    //         function c() {
+    //             var c = 300;
+    //         }
+    //         c();
+    //     }
+    //     b();
+    // }
+    // var glob = 100;
+    // var f = 200;
+    // a();
+    // a 定义 a.[[scope]] --> 0.GO {a: (function(){},glob : 100,f:200)}
+    // a 执行 a.[[scope]] --> 0.AO {a : 100,b : (function(){})}
+    //                        1.GO {a: (function(){},glob : 100,f:200)}
+    // b 定义 b.[[scope]]  -->  0.AO {a : 100,b : (function(){})}
+    //                        1.GO {a: (function(){},glob : 100,f:200)}
+    // b 执行 b.[[scope]] -->    0.bAO {b :200,c:(function () {})}
+    //                           1.AO {a : 100,b : (function(){})}
+    //                           2.GO {a: (function(){},glob : 100,f:200)}
+    // c 定义 c.[[scope]] -->    0.bAO {b :200,c:(function () {})}
+    //                           1.AO {a : 100,b : (function(){})}
+    //                           2.GO {a: (function(){},glob : 100,f:200)}
+    // c 执行 c.[[scope]] -->    0.cAO {c : 300}
+    //                           1.bAO {b :200,c:(function () {})}
+    //                           2.AO {a : 100,b : (function(){})}
+    //                           3.GO {a: (function(){},glob : 100,f:200)}
+
+    // function a() {
+    //     var aa = 100;
+    // }
+    // function b() {
+    //     var bb = 200;
+    // }
+    // var glob = 100;
+    // a();
+    // b();
+    // a 定义  0.GO {glob : 100}
+    // b 定义  0.GO {glob : 100}
+    // a 执行  0.aAO {aa:100}
+    //         1.GO  {glob : 100}
+    // b 执行  0.bAO {bb : 200}
+    //         1.GO {glob : 100}
+
+    // 闭包
+    // function a() {
+    //     var aaa = 123;
+    //     function b () {
+    //         console.log(aaa);
+    //     }
+    //     return b;
+    // }
+    // var demo = a();
+    // demo();
+
+    // 闭包版累加器
+    // function add() {
+    //     var num = 0;
+    //     function b() {
+    //         num ++;
+    //         document.write(num);
+    //     }
+    //     return b;
+    // }
+    // var demo = add();
+    // demo();
+
+    // 闭包做缓存
+    //  function eater () {
+    //     var food = " ";
+    //     var obj = {
+    //         eat : function () {
+    //             document.write('I am eating' + food);
+    //             // food = "";
+    //         },
+    //         push : function(myFood) {
+    //             food = myFood;
+    //         }
+    //     }
+    //     return obj;
+    //  }
+    //  var eater1 = eater();
+    //  eater1.eat();
+    //  eater1.push('banana');    //有问题
+    //  eater1.eat();
+
+//闭包导致的10个10
+//     function test() {
+//     var arr = [];
+//     for(var i = 0; i < 10; i ++) {
+//         arr[i] = function () {
+//             console.log(i);
+//         }
+//     }
+//     return arr;
+//    }
+//    var demo = test();
+//    for(var j = 0; j < 10; j++) {
+//     demo[j]();
+//    }
+
+
+    // 解决闭包问题
+    // function test() {
+    //     var arr = [];
+    //     for(var i = 0; i < 10; i ++) {
+    //         (function (canshu) {
+    //             arr[canshu] = function () {
+    //                 console.log(canshu);
+    //             }
+    //         }(i))
+    //     }
+    //     return arr;
+    // }
+    // var demo = test();
+    // for(var j = 0; j < 10; j++) {
+    //     demo[j]();
+    // }
+
+    // var test = (function () {
+    //     document.write('999');
+    // }());
+
+    // function test() {
+    //     var a = 123;
+    //     (function () {
+    //         document.write(a);
+    //     }())
+    // }
+    // test();
+
+    // function test() {
+    //     var a = b = 10;
+    // }
+    // test();
+    // document.write(window.a,window.b);
+
+    // function fn(a) {
+    //     document.write(a);//function a() {}
+    //     var a = 123;
+    //     document.write(a);//123
+    //     function a() {};
+    //     document.write(a);//123
+    //     document.write(b);//undefined
+    //     var b = function () {};
+    //     document.write(b);//function () {}
+    //     function d() {};
+    // }
+    // fn(1);
+
+    // function test(a,b) {
+    //     document.write(a);//1
+    //     c = 0;
+    //     var c;
+    //     a = 3;
+    //     b = 2;
+    //     document.write(b);//2
+    //     function b() {}
+    //     function d() {}
+    //     document.write(b);//2
+    // }
+    // test(1);
+
+    //  var a = 10;
+    //  document.write(a);//10
+    //  function test() {
+    //     document.write(f);//undefined
+    //     f = 30;
+    //     var f;
+    //  }
+    //  var f = 20;
+    //  test();
+    //  document.write(f);//20
+
+    // b = 200;
+    // function test () {
+    //     document.write(b);//200
+    //     b = 300;
+    // }
+    // test();
+    // var b;
+    // function b() {}
+
+    // var fn;
+    // function fn(fn) {
+    //     fn = 1;
+    //     document.write(fn);//1
+    //     var fn = function () {}
+    //     document.write(fn);//function () {}
+    //     function fn() {}
+    // }
+    // fn(2);
+    // fn = 20;
+    // document.write(fn);//20
+
+    // function test () {
+    //     document.write(i);//undefined
+    //     for(var i = 0; i < 10; i ++) {
+
+    //     }
+    //     document.write(i);//10
+    // }
+    // test();
+
+    // function bar() {
+    //     return foo;
+    //     foo = 10;
+    //     function foo() {
+
+    //     }
+    //     var foo = 11;
+    // }
+    // document.write(bar());//function foo() {}
+
+    // document.write(bar());
+    // function bar() {
+    //     foo = 10;
+    //     function foo() {}
+    //     var foo =11;
+    //     return foo;//11
+    // }
+
+    // a = 100;
+    // function demo(e) {
+    //     function e() {}
+    //     arguments[0] = 2;
+    //     document.write(e)//2
+    //     if(a) {
+    //         var b = 123;
+    //         function c() {
+
+    //         }
+    //     }
+    //     var c;
+    //     a = 10;
+    //     var a;
+    //     document.write(b);//undefined
+    //     f = 123;
+    //     document.write(c);//function c() {}
+    //     document.write(a);//10
+    // }
+    // var a;
+    // demo(1);
+    // document.write(a);//100
+    // document.write(f);//123
+
+    // var x = 1, y = z = 0;
+    // function add(n){
+    //     return n = n + 1;
+    // }
+    // y = add(x);
+    // function add(n) {
+    //     return n = n + 3;
+    // }
+    // z = add(x);//输入1,输出4
+
+    // window.foo || window.foo == 'bar';
+    // document.write(window.foo);
+
+    // var jing = {
+    //     name : 'jing',
+    //     age : 20,
+    //     sex : 'male',
+    //     health : 100,
+    //     smoke : function () {
+    //         this.health--;
+    //     },
+    //     duanlian : function () {
+    //         this.health++;
+    //     }
+    // }
+
+    // var deng = {
+    //     name : 'laodeng',
+    //     age : 30,
+    //     sex : 'male',
+    //     wife : {
+    //         name : 'xiaoliu',
+    //         age : 23,
+    //         sex : 'female',
+    //         complain : function () {
+    //             console.log('my husband is a dog');
+    //         }
+    //     },
+    //     son : {
+    //         name : 'xiaodeng',
+    //         age : 16,
+    //         sex : 'male',
+    //         sayname : function () {
+    //             console.log(this.name);
+    //         }
+    //     },
+    //     health : 100,
+    //     smoke : function () {
+    //         this.health--;
+    //     },
+    //     duanlian : function () {
+    //         this.health++;
+    //     }
+    // }
+
+    // 构造函数
+    // function Car(color,owner) {
+    //     this.color = color;
+    //     this.owner = owner;
+    //     this.name = 'benchi';
+    //     this.height = 1450;
+    //     this.width = 4950;
+    //     this.you = 100;
+    //     this.run = function () {
+    //         this.you--;
+    //     }
+    // }
+    // var car1 = new Car('bule' , 'wangwu');
+    // var car2 = new Car('red' ,  'zhangsan');
+
+    // function Test (name,age) {
+    //     var that = {};
+    //     that.name = name;
+    //     that.age = age;
+    //     return that;
+    // }
+    //  var test = new Test('jingrui',20);
+
+    // var str = new String('abcd');
+    // var num = new Number(123);
+    // var boo = new Boolean(true);
+
+    // var num = 123;
+    // num.name = 'abcd'
+
+    // var foo = { n : 1 };
+    // var bar = foo;
+    // foo.x = foo = { n : 2 };
+    // 这里的foo.x指的是原来那个对象的x,原来对象的那个x一直等着没赋值呢
+    // console.log(foo.x);           我不理解
+
+    // function employee(name,code) {
+    //     this.name = 'wangwu';
+    //     this.code = 'A001';
+    // }
+    // var emp = new employee('zhangsan','B002');
+    // document.write("雇员姓名:" + emp.name + "<br>" );
+    // document.write("雇员代号:" + emp.code + "<br>" );
+
+    // var str = "abc";
+    // str += 1;
+    // var test = typeof(str);
+    // if(test.length == 6) {
+    //     test.sign = "typeof返回的结果可能是String";
+    // }
+    // document.write(test.sign);
+    //因为这里面的test隐式的调用了包装类,包装类是原始值,原始值无法添加属性
+
+    // var str = false + 1;//相当于0+1
+    // document.write(str);//1
+    // var demo = false == 1;
+    // document.write(demo);//false
+    // if(typeof(a)&& - true + (+undefined) + "") {
+    //     document.write('基础扎实');
+    // }
+    // if(11 + '11' * 2 == 33) {   //乘2就会把字符串11转变为数字类型的11
+    //     document.write('基础扎实');
+    // }
+    // !!" " + !!"" - !!false || document.write('6666') ;
+    </script> 
+</body>
+</html>
