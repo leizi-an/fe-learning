@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16</title>
+</head>
+<body>
+    <script>
+        // 原型链继承
+        // GrandFather.prototype.lastName = "jing";
+        // function GrandFather () {}
+        // var grandFather = new GrandFather();
+        // Father.prototype = grandFather;
+        // function Father () {}
+        // var father = new Father();
+        // Son.prototype = father;
+        // function Son() {}
+        // var son = new Son();
+
+        // 构造函数继承
+        // function GrandFather (name,age) {
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // function Father (name,age) {
+        //     GrandFather.call(this,name,age);
+        // }
+        // var father = new Father('jingrui',20);
+
+        // 共享原型
+        // GrandFather.prototype.lastName = 'jing';
+        // function GrandFather () {
+        //     // this.name = name;
+        //     // this.age = age;
+        // }
+        // // var grandFather = new GrandFather('jing',123);
+        // Father.prototype = GrandFather.prototype;
+        // function Father () {}
+
+        // 圣杯模型
+        // function inherit(Origin,Target) {
+        //     function Xiaosan () {}
+        //     Xiaosan.prototype = Origin.prototype;
+        //     Target.prototype = new Xiaosan();
+        //     Target.prototype.constructor = Target;
+        //     Target.prototype.uber
+        // }
+        // Person.prototype.lastName = 'jing';
+        // function Person () {}
+        // function Son () {}
+        // inherit(Person,Son);
+
+        // 这也是圣杯上面那个正规
+        // Father.prototype.lastName = 'jing';
+        // function Father () {}
+        // Xiaosan.prototype = Father.prototype;
+        // function Xiaosan () {}
+        // var xiaosan = new Xiaosan();
+        // Son.prototype = xiaosan;
+        // function Son () {}
+
+        // 链式调用
+        // var jing = {
+        //     drink : function () {
+        //         console.log('drink haohe');
+        //         return this;
+        //     },
+        //     smoke : function () {
+        //         console.log('smoke haowaner');
+        //         // return this;
+        //     }
+        // }
+
+        // function GrandFather(name,age,sex) {
+        //     this.name = name;
+        //     this.age = age;
+        //     this.sex = sex;
+        // }
+        // function Father(name,age,sex,aihao) {
+        //     GrandFather.apply(this,arguments);
+        //     this.aihao = aihao;
+        // }
+        // var father = new Father('jingrui',20,'male','play');
+
+        // Person.prototype.lastName = 'jing';
+        // function Person() {
+        //     this.age = 20;
+        //     this.sex = 'male';
+        // }
+        // var person = new Person();
+        // for(var prop in person) {
+        //     if(person.hasOwnProperty(prop)) {
+        //         console.log(person[prop]);
+        //     }
+        // }
+
+        // var num = (function (n) {
+        //     if( n == 1) {
+        //         return 1;
+        //     }
+        //     return n * arguments.callee(n-1);
+        // }(5))
+
+        // function demo () {
+        //     test();
+        // }
+        // function test () {
+        //     console.log(test.caller);
+        // }
+        // demo();
+
+        // var obj = {
+        //     name : 'jingrui',
+        //     age : 20,
+        //     sex : 'male'
+        // }
+        // var obj1 = {}
+        // for(var prop in obj) {
+        //     obj1[prop] = obj[prop];
+        // }
+
+        // 浅拷贝会改变引用值
+        // var obj = {
+        //     name : 'jingrui',
+        //     age : 20,
+        //     sex : 'male',
+        //     card : ['vip','svip']
+        // }
+        // var obj1 = {}
+        // function Clone (Origin,Target) {
+        //     for(var prop in Origin) {
+        //         Target[prop] = Origin[prop];
+        //     }
+        // }
+        // Clone(obj,obj1);
+
+        
+    </script>
+</body>
+</html>
