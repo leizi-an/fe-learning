@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obligatory code</title>
+</head>
+<body>
+    <script>
+        // 2的次幂
+        // var n = parseInt(window.prompt(''));
+        // var value = 1;
+        // if( n > 0 ) {
+        //     for(var i = 0; i < n; i ++) {
+        //         value *= 2;
+        //     }
+        //     document.write(value);
+        // } else {
+        //     document.write(1);
+        // }
+
+        // 阶乘
+        // var n = parseInt(window.prompt(''));
+        // var value = 1;
+        // for(var i = 1; i < n + 1 ; i ++) {
+        //     value *= i;
+        // }
+        // document.write(value);
+
+        //递归求阶乘
+        // function mul (n) {
+        //     if( n == 1) {
+        //         return 1;
+        //     } else {
+        //         return n * mul(n - 1);
+        //     }
+        // }
+
+        //斐波那契数列
+    //     var n = parseInt(window.prompt(''));
+    //     var first = 1;
+    //     var second = 1;
+    //     var third;
+    //     if( n == 1 || n == 2 ) {
+    //         document.write(1);
+    //     } else {
+    //     for(var i = 1; i < n - 1 ; i ++) {
+    //         third = first + second;
+    //         first = second;
+    //         second = third;
+    //     }
+    //     document.write(third);
+    // }
+
+        // 递归解决斐波那契数列
+        // function fb(n) {
+        //     if( n == 1 || n == 2) {
+        //         return 1;
+        //     } else {
+        //         return  fb( n - 1 ) + fb( n - 2 );
+        //     }
+        // }
+
+        // 反向输出
+        // var n = 456;
+        // var tail = 456 % 10;
+        // var mid = (456 % 100 - tail) / 10;
+        // var head = (456 % 1000 - mid * 10 - tail) / 100;
+        // document.write(tail,mid,head);
+
+        //三数求最大
+        // var a = parseInt(window.prompt(''));
+        // var b = parseInt(window.prompt(''));
+        // var c = parseInt(window.prompt(''));
+        // if( a > b ) {
+        //     if( a > c ) {
+        //         document.write(a);
+        //     } else {
+        //         document.write(b);
+        //     } 
+        // } else if( b > a ) {
+        //     if( b > c ) {
+        //         document.write(b);
+        //     } else {
+        //         document.write(c);
+        //     }
+        // }
+
+        //求100以内质数
+        // var count = 0;
+        // for( var i = 2; i < 100; i ++) {
+        //     for(var j = 1; j <= i; j ++) {
+        //         if( i % j ==0 ) {
+        //             count ++;
+        //         }
+        //     }
+        //     if( count == 2 ) {
+        //         document.write( i + " " );
+        //     } else {
+        //         document.write( i + "不是质数");
+        //     }
+        //     count = 0;
+        // }
+
+        //函数累加器
+        // function add() {
+        //     var sum = 0;
+        //     for( var i = 0; i < arguments[i]; i ++ ) {
+        //         sum += arguments[i];
+        //     }
+        //     console.log(sum);
+        // }
+        // add(1,2,3,4,5);
+
+        // 动物叫声
+        // function scream(animal) {
+        //     switch(animal) {
+        //         case 'dog' : 
+        //         document.write('wangwangwang');
+        //         break;
+        //         case 'cat' :
+        //         document.write('miaomiaomiao');
+        //         break;
+        //     }
+        // } 
+        // scream('dog');
+
+        // 闭包
+        // function a() {
+        //     var aaa = 123;
+        //     function b() {
+        //         console.log(aaa);
+        //     }
+        //     return b;
+        // }
+        // var demo = a();
+        // demo();
+
+        // 闭包版累加器
+        // function add() {
+        //     var sum = 0;
+        //     function b() {
+        //         sum ++;
+        //         console.log(sum);
+        //     }
+        //     return b;
+        // }
+        // var demo = add();
+        // demo();
+
+        // 闭包做缓存    有问题
+        // function eater () {
+        //     var food = " ";
+        //     var obj = {
+        //         eat : function () {
+        //             document.write('I am eating' + food);
+        //         },
+        //         push : function (myFood) {
+        //             food = myFood;
+        //         }
+        //     }
+        //     return obj;
+        // }
+        // var eater1 = eater();
+        // eater1.eat();
+        // eater1.push('banana');
+        // eater1.eat();
+
+        // 闭包导致10个10
+        // function test() {
+        //     var arr = [];
+        //     for(var i = 0; i < 10; i ++) {
+        //         arr[i] = function () {
+        //             console.log(i);
+        //         }
+        //     }
+        //     return arr;
+        // }
+        // var demo = test();
+        // for(var j = 0; j < 10; j ++) {
+        //     demo[j]();
+        // }
+
+        // 解决闭包
+        // function test() {
+        //     var arr = [];
+        //     for(var i = 0; i < 10; i ++) {
+        //         (function (canshu) {
+        //             arr[canshu] = function() {
+        //                 console.log(canshu);
+        //             }
+        //         }(i))
+        //     }
+        //     return arr;
+        // }
+        // var demo = test();
+        // for(var j = 0; j < 10; j ++) {
+        //     demo[j]();
+        // }
+
+        // 原型链继承
+        // GrandFather.prototype.lastName = 'jing';
+        // function GrandFather () {}
+        // var grandFather = new GrandFather ();
+        // Father.prototype = grandFather;
+        // function Father () {}
+        // var father = new Father();
+        // Son.prototype = father;
+        // function Son () {}
+        // var son = new Son();
+
+        // 构造函数继承
+        // function Factory (name,age) {
+        //     this.name = name;
+        //     this.age = age;
+        // }
+        // function Person(name,age) {
+        //     Factory.call(this,name,age);
+        // }
+        // var person = new Person('jingrui',20);
+
+        // 共享原型
+        // Person.prototype.lastName = 'jing';
+        // function Person(name) {
+        //     this.name = name;
+        // }
+        // var person = new Person('jingrui');
+        // PersonAnother.prototype = Person.prototype
+        // function PersonAnother() {}
+        // var personAnother = new PersonAnother();
+
+        // 圣杯模式继承
+        // function inherit (Origin,Target) {
+        //     Xiaosan.prototype = Origin.prototype;
+        //     function Xiaosan() {}
+        //     var xiaosan = new Xiaosan();
+        //     Target.prototype = xiaosan;
+        //     Target.prototype.constructor = Target;
+        //     Target.prototype.uber = Origin.prototype;
+        // }
+        // Father.prototype.lastName = 'jing';
+        // function Father() {}
+        // function Son() {}
+        // inherit(Father,Son);
+        // var son = new Son();
+
+        //圣杯模式高大上版本
+
+        //链式调用
+        // var jing = {
+        //     drink : function () {
+        //         console.log('heduo');
+        //         return this;
+        //     },
+        //     smoke : function () {
+        //         console.log('shangyin');
+        //         return this;
+        //     }
+        // }
+
+        // 浅克隆
+    //     var obj = {
+    //         name : 'jingrui',
+    //         age : 20,
+    //         sex : 'male',
+    //         card : ['vip','svip']
+    //     }
+    //     var obj1 = {}
+    //     function Clone(Origin,Target) {
+    //     for(var prop in Origin) {
+    //         Target[prop] = Origin[prop];
+    //     }
+    // }
+    //     Clone(obj,obj1);
+
+
+
+
+    // 自实现new
+    // function mynew () {
+    //     var obj = new Object();
+    //     //取出构造函数,例如下面的Person
+    //     var constructor = [].shift.call(arguments);
+    //     obj.__proto__ = Object.prototype;
+    //     //因为系统当中的new已经自己隐式的给你返回了一个return this,但是我们定义的函数没有返回值,所以我们要设置
+    //     var returned = constructor.apply(obj,arguments);
+    //     return typeof returned === "object" ? returned : obj;
+    // }
+    // function Person (name,age) {
+    //     this.name = name;
+    //     this.age = age;
+    // }
+    // var person  = mynew (Person,'jingrui',20);
+
+    // 自创call
+    // Function.prototype.mycall = function (foo) {
+    //     var foo = foo || window;
+    //     foo.fn = this;
+    //     var args = [];
+    //     for(var i = 1; i < arguments.length; i ++) {
+    //         args.push('arguments[' + i + ']');
+    //     }
+    //     var result = eval('foo.fn(' + args +')');
+    //     delete foo.fn
+    //     return result;
+    // }
+    // var value = 2;
+    // var obj = {
+    //     value : 1
+    // }
+    // function bar(name,age) {
+    //     console.log(this.value);
+    //     return {
+    //         value : this.value,
+    //         name : name,
+    //         age : age
+    //     }
+    // }
+    // bar.call(null);
+    // console.log(bar.mycall(obj,'jingrui',20));
+
+    // 自创apply
+    // Function.prototype.apply = function (foo,arr) {
+    //     var foo = Object(foo) || window;
+    //     foo.fn = this;
+    //     var result;
+    //     if(!arr) {
+    //         result = foo.fn();
+    //     }
+    //     else {
+    //         var args = [];
+    //         for(var i = 0; i < arguments.length; i ++) {
+    //             args.push('arr[' + i +']');
+    //         }
+    //         result = eval('foo.fn(' + args + ')');
+    //     }
+    //     delete foo.fn
+    //     return result;
+    // }
+    
+    </script>
+    <!-- // 三栏布局,两边使用 float,中间使用 margin -->
+    <!-- <style>
+        .wrapper {
+            background-color: #eee;
+            overflow: hidden;
+            padding: 20px;
+            height: 200px;
+        }
+        .left {
+            width: 200px;
+            height: 200px;
+            float: left;
+            background-color: coral;
+        }
+        .right {
+            width: 120px;
+            height: 200px;
+            float: right;
+            background-color: lightblue;
+        }
+        .mid {
+            margin-left: 220px;
+            height: 200px;
+            background-color: lightpink;
+            margin-right: 140px;
+        }
+    </style>
+    <div class="wrapper">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="mid"></div>
+    </div> -->
+
+    <!-- 三栏布局,两边absolute,中间margin -->
+    <!-- <style>
+        .wrapper {
+            position: relative;
+        }
+        .left,
+        .right,
+        .mid {
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        .left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            background-color: green;
+        }
+        .right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            background-color: green;
+        }
+        .mid {
+            margin: 0 20px;
+            background-color: black;
+            color: while;
+        }
+    </style>
+    <div class="wrapper">
+        <div class="left">左边</div>
+        <div class="right">右边</div>
+        <div class="mid">中间</div>
+    </div> -->
+
+    <!-- 三栏布局,两边使用float和负margin -->
+    <!-- <style>
+        .left,
+        .right,
+        .mid {
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        .wrapper {
+            float: left;
+            width: 100%;
+        }
+        .mid {
+            margin: 0 110px;
+            background-color: black;
+            color: white;
+        }
+        .left,
+        .right {
+            float: left;
+            width: 100px;
+            margin-left: -100%;
+            background-color: green;
+        }
+        .right {
+            margin-left: -100px;
+        }
+    </style>
+    <div class="wrapper">
+        <div class="mid">中间</div>
+    </div>
+        <div class="left">左边</div>
+        <div class="right">右边</div> -->
+
+        <!-- 三栏布局,使用display:table实现 -->
+        <!-- <style>
+            .wrapper {
+                height: 200px;
+                line-height: 200px;
+                text-align: center;
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+            }
+            .left,
+            .right,
+            .mid {
+                display: table-cell;
+            }
+            .left,
+            .right {
+                width: 100px;
+                background-color: green;
+            }
+            .mid {
+                background-color: black;
+                color: white;
+                width: 100%;
+            }
+        </style>
+        <div class="wrapper">
+            <div class="left">左边</div>
+            <div class="mid">中间</div>
+            <div class="right">右边</div>
+        </div> -->
+
+        <!-- 三栏布局,使用flex实现 -->
+        <!-- <style>
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
+            }
+            .left,
+            .right,
+            .mid {
+                height: 100px;
+            }
+            .left {
+                width: 200px;
+                background-color: coral;
+            }
+            .right {
+                width: 120px;
+                background-color: lightblue;
+            }
+            .mid {
+                background-color: #555;
+                width: 100%;
+                margin: 0 20px;
+            }
+        </style>
+        <div class="wrapper">
+            <div class="left">左边</div>
+            <div class="mid">中间</div>
+            <div class="right">右边</div>
+        </div> -->
+
+        <!-- 三栏布局,使用grid网络布局 -->
+        <!-- <style>
+            .wrapper {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 300px auto 300px;
+            }
+            .left,
+            .right,
+            .mid {
+                height: 100px;
+            }
+            .left {
+                background-color: coral;
+            }
+            .right {
+                width: 300px;
+                background-color: lightblue;
+            }
+            .mid {
+                background-color: #555;
+            }
+        </style>
+        <div class="wrapper">
+            <div class="left">左侧</div>
+            <div class="mid">中间</div>
+            <div class="right">右侧</div>
+        </div> -->
+</body>
+</html>
