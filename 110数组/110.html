@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function mynew () {
+        //     var obj = new Object();
+        //     var constructor = [].shift.call(arguments);
+        //     obj.__proto__ = constructor.prototype;
+        //     var returned = constructor.apply(obj,arguments);
+        //     return typeof returned === "object" ? returned : obj;
+        // }
+        // Father.prototype.name = 'jing';
+        // function Father (money,zhihui) {
+        //     this.money = money;
+        //     this.zhihui = zhihui;
+        // }
+        // var father = mynew(Father,'wubai','ben');
+
+        //实现数组的排序
+        // var arr = [1,6,8,5,4,9,2];
+        // arr.sort(function (a,b) {
+        //     return a - b;
+        // });
+
+        // 给数组中的对象进行排序
+        // var arr = [
+        //     {name : 'superman' , age : 5000},
+        //     {name : 'batman' , age : 35},
+        //     {name : 'apilderman' , age : 40}
+        // ] 
+        // arr.sort (function (a,b) {
+        //     if( a.name > b.name ) {
+        //         return 1;
+        //     } else {
+        //         return -1;
+        //     }
+        // })
+
+        // 让数组乱序
+        // var arr = [1,2,3,4,5,6,7,8];
+        // arr.sort(function () {
+        //     return Math.random() - 0.5;
+        // })
+
+        //把两个数相连,但是不会改变原数组,而且谁调用的concat方法,谁就在前面
+        // var arr = [1,2,3];
+        // var arr1 = [4,5,6];
+        // var arr2 = arr1.concat(arr);
+
+        //tostring方法,把数组里面的内容以字符串形式打印出来
+        // var arr = [1,2,3];
+        
+        //slice方法,从第几位开始到第几位结束
+        // var arr = [1,2,3,4,5];
+
+        // slice方法当中传入负值
+        // if( num > 0 ) {
+        //     // 那么就用num就可以了
+        // } else {
+        //     // 就用num+length
+        // }
+
+        //arr.join(),里面传什么参数连接符就是什么
+        // var arr = ['jingrui','and','duoduo','is friend'];
+        // var str = arr.join(" ");
+
+        // var arr = ['baidu','alibaba','tencent','toutiao','sohu','sina','wangyi','microsoft','goole','facebook'];
+        // 散列结构比较好,因为栈内存进去容易拿出来费劲,浪费时间
+
+        // 数组降重
+        // Array.prototype.unique = function () {
+        //     //这里面定义一个空数组用来一会接收我们的数组
+        //     var myArray = [];
+        //     //定义一个空对象,把数组当中的每一位,以对象形式传进去,因为对象当中只允许,有一个相同的属性名
+        //     var obj = {};
+        //     len = this.length;
+        //     for(var i = 0; i < len; i ++) {
+        //         //if用来判断如果你不在对象里面,那么就把你传入对象当中,并且在下一步,给你传一个随便的属性值
+        //         if(!obj[this[i]]) {
+        //             obj[this[i]] = "abc";
+        //         //把这个新加入的数组值,传入我们刚才建立的空数组当中
+        //             myArray.push(this[i]);
+        //         }
+        //     }
+        //     return myArray;
+        // }
+        // var arr = ['a','b',1,1,'a','b'.undefined];
+
+        // 字符串去重
+        // String.prototype.unique = function () {
+        //     //第一步先把字符串变成数组
+        //      var arr = this.split("");
+        //      //然后调用刚才写好的arr.unique方法,再用数组当中的join方法,把数组转变为字符串
+        //      return arr.unique().join("");
+        // }
+    </script>
+</body>
+</html>
