@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手动实现</title>
+</head>
+<body>
+    <script>
+    //    自创new        //我感觉这个mynew更像一个call
+    // function mynew () {
+    //     //创建一个空对象
+    //     var obj = new Object();
+    //     //取出构造函数     //这构造函数咋取出来的啊
+    //     var constructor = [].shift.call(arguments);
+    //     //继承构造函数的原型
+    //     obj.__proto__ = constructor.prototype;
+    //     //为新建对象调用构造函数,生成其内部属性,同时构造函数运行时它想返回的值
+    //     var somethingReturned = constructor.apply(obj,arguments);
+    //     //返回对象
+    //     return typeof(somethingReturnedobj) === 'objetc' ? somethingReturned : obj;
+    // }
+    // function Person(name,age) {
+    //     this.name = name;
+    //     this.age = age;
+    // }
+    // var person = mynew (Person,'jingrui',123);
+
+    // 自创call和apply
+    // 在自创call的时候,我们可以把函数定义成对象的属性,但是这样会让对象多出来一个属性,所以我们执行完对象当中的函数在最后delete他
+    //自创call第一版
+//     Function.prototype.mycall = function (foo) {    //为啥把foo传进去啊
+//     //获取调用call的函数,用this获取
+//     foo.fn = this;
+//     foo.fn();
+//     delete foo.fn;
+//    }
+//    var obj = {
+//     name : 1
+//    }
+//    function bar () {
+//     console.log(this.name);
+//    }
+//    bar.mycall(obj);
+
+    //  第二版解决了传不定长参数的问题
+    // Function.prototype.mycall = function (foo) {
+    //     foo.fn = this;
+    //     var args = [];
+    //     for(var i = 1; i < arguments.length; i ++) {
+    //         args.push('arguments[' + i + ']');
+    //     }
+    //     eval('foo.fn(' + args +')');
+    //     delete foo.fn;
+    // }
+    // var obj = {
+    //     value : 1
+    // }
+    // function bar (name,age) {
+    //     console.log(name);
+    //     console.log(age);
+    //     console.log(this.value);
+    // }
+    // bar.mycall(obj,'jingrui',20);
+
+    // var value = 1;
+    // function bar () {
+    //     console.log(this.value);
+    // }
+    // bar.call(null);
+
+    //第三版也就是最终版
+    // Function.prototype.mycall = function (foo) {
+    //     var foo = foo || window;
+    //     foo.fn = this;
+    //     var args = [];
+    //     for(var i = 1; i < arguments.length; i ++) {
+    //         args.push('arguments[' + i + ']');
+    //     }
+    //     var result = eval('foo.fn(' + args +')');
+    //     delete foo.fn
+    //     return result;
+    // }
+    // var value = 2;
+    // var obj = {
+    //     value : 1
+    // }
+    // function bar(name,age) {
+    //     console.log(this.value);
+    //     return {
+    //         value : this.value,
+    //         name : name,
+    //         age : age
+    //     }
+    // }
+    // bar.call(null);
+    // console.log(bar.mycall(obj,'jingrui',20));
+
+    // 实现apply
+    // Function.prototype.apply = function (foo,arr) {
+    //     var foo = Object(foo) || window;
+    //     foo.fn = this;
+    //     var result;
+    //     if(!arr) {
+    //         result = foo.fn();
+    //     }
+    //     else {
+    //         var args = [];
+    //         for(var i = 0; i < arguments.length; i ++) {
+    //             args.push('arr[' + i +']');
+    //         }
+    //         result = eval('foo.fn(' + args + ')');
+    //     }
+    //     delete foo.fn
+    //     return result;
+    // }
+
+    // 手动实现instanceof
+    // function Person() {
+    //     this.name = 'jingrui'
+    // }
+    // var person = new Person();
+    // console.log(person.name);
+    // function newinstanceof(a,b) {
+    //     while(true) {
+    //         if(a.__protp__ === b.prototype)
+    //         if(a.__protp__ === null)
+    //         a = a.__protp__
+    //     }
+    // }
+    // newinstanceof(person,Object);
+    // newinstanceof(person,Array);
+
+    
+    
+    // function inherit(Origin,Target) {
+    //     function Xiaosan () {}
+    //     Xiaosan.prototype = Origin.prototype;
+    //     var xiaosan = new Xiaosan();
+    //     Target.prototype = xiaosan;
+    //     Target.prototype.constructor = Target;
+    // }
+    // Father.prototype.lastName = 'jing';
+    // function Father () {}
+    // function Son () {}
+    // inherit(Father,Son);
+    // var son = new Son();
+    </script>
+</body>
+</html>
