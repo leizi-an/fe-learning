@@ -349,6 +349,36 @@
     //     delete foo.fn
     //     return result;
     // }
+
+    // // 数组降重
+    // //我们可以根据对象当中不会出现相同的属性名这个定义来完成,对数组的降重
+    // Array.prototype.unique = function () {
+    // //定义一个空数组,用来接收我们的数据
+    //     var myArray = [];
+    // //定义一个空对象,来把我们的数组一位一位以对象属性的形式传入对象当中
+    //     var obj = {}
+    // //this.length指的是当前数组的长度
+    //     len = this.length;
+    //     for(var i = 0; i < len; i ++) {
+    // //我们用if来判断,当中数组的值,有没有作为对象的数组名传入对象当中,如果没有那么,随便定义一个属性值,把他传入对象当中
+    //         if(!obj[this[i]]) {
+    //             obj[this[i]] = '666';
+    //             myArray.push(this[i]);
+    //         }
+    //     }
+    //     return myArray;
+    // }
+    // var arr = ['a','b',1,1,'a','b',undefined];
+
+
+    // // 字符串降重
+    // String.prototype.unique = function () {
+    // //第一步把字符串变成数组形式
+    //     var arr = this.split("");
+    // //第二步调用数组的unique方法,然后利用join的方法,把字符串转变成数组
+    //     return  arr.unique().join("");
+    // }
+
     
     </script>
     <!-- // 三栏布局,两边使用 float,中间使用 margin -->

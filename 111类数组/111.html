@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>类数组</title>
+</head>
+<body>
+    <script>
+        // //一旦对象当中,定义了.length,和push方法,那么就相当于一个类数组,因为他可以像数组一样操作
+        // var obj = { 
+        // //对象当中按数字顺序来的属性叫做索引属性
+        //     "1" : 'b',
+        //     "2" : 'c',
+        //     "3" : "d",
+        // //这里的length会自加一次,这里的length = 3 表示的是从第三位开始更改
+        //     "length" : 3,
+        //     "push" : Array.prototype.push
+        // }
+        // obj.push('a');
+        // obj.push('e');
+
+        // var obj = {
+        //     "0" : "a",
+        //     "2" : "b",
+        //     "a" : "c",
+        //     "3" : "d",
+        // //在这里不用去看那个a,因为这里的length是1,所以我们是从0和2中间加入一个"1",而且它会把a放在最后面
+        // // 类数组操作索引位
+        // //每次push一个新的值进来,length就自加一次
+        //     "length" : 1,
+        //     "push" : Array.prototype.push
+        // }
+        // obj.push('e');
+        // obj.push('f');
+        // obj.push('h');
+
+        // var obj = {
+        //     "0" : "a",
+        //     "1" : "b",
+        //     "2" : "c",
+        //     "length" : 3,
+        //     "push" : Array.prototype.push,
+        // //当你加入这个splice方法它就会变成数组形式了
+        //     "splice" : Array.prototype.splice
+        // }
+
+        // var num = 1 > 2 ? (NaN == NaN ? 0 : 1) : (false == undefined ? 2 : 3);//3 false不等于undefined
+
+        // try {
+        //     console.log('a');
+        //     console.log(a);
+        //     console.log('b');
+        // } catch(e) {
+        //     console.log(e.name + " : " + e.message );
+        // }
+        // console.log('win');
+
+
+        //  var div = document.getElementsByTagName('div')[0];
+        //  div.style.width = "100px";
+
+        function mynew() {
+            var obj = new Object();
+            var constructor = [].shift.call(arguments);
+            obj.__proto__ = constructor.prototype;
+            var returned = constructor.apply(obj,arguments);
+            return typeof(returned) == "object" ? returned : obj;
+        }
+        Person.prototype.money = 'more';
+        function Person(name,age) {
+            this.name = name;
+            this.age = age;
+        }
+        var person = mynew (Person,'rose',20);
+        console.log(person.__proto__);
+    </script>
+</body>
+</html>
